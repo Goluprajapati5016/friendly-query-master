@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Github, Linkedin, Mail, ExternalLink, Code, Terminal, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -6,7 +7,7 @@ const Index = () => {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       {/* Header */}
-      <header className="py-4 px-6 flex items-center justify-between border-b bg-white/80 backdrop-blur-sm sticky top-0 z-10">
+      <header className="py-4 px-6 flex items-center justify-between border-b bg-white/90 backdrop-blur-sm sticky top-0 z-10">
         <h1 className="text-xl font-medium">Kuhu</h1>
         <nav className="hidden md:flex gap-6">
           <a href="#about" className="hover:text-primary transition-colors">About</a>
@@ -47,7 +48,7 @@ const Index = () => {
                 </Button>
               </div>
             </div>
-            <div className="relative w-72 h-72 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 flex items-center justify-center">
+            <div className="relative w-72 h-72 rounded-full bg-gradient-to-r from-primary/30 to-accent/50 flex items-center justify-center">
               <div className="w-64 h-64 rounded-full bg-white/90 shadow-lg flex items-center justify-center">
                 <Terminal className="h-24 w-24 text-primary" />
               </div>
@@ -56,7 +57,7 @@ const Index = () => {
         </section>
         
         {/* About Section */}
-        <section id="about" className="py-20 px-6 bg-white/30">
+        <section id="about" className="py-20 px-6 bg-accent/30">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-center">About Me</h2>
             <div className="flex flex-col md:flex-row gap-12">
@@ -114,7 +115,7 @@ const Index = () => {
         </section>
         
         {/* Projects Section */}
-        <section id="projects" className="py-20 px-6 bg-white/30">
+        <section id="projects" className="py-20 px-6 bg-accent/30">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
