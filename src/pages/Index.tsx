@@ -1,11 +1,10 @@
-
 import React from "react";
 import { Github, Linkedin, Mail, ExternalLink, Code, Terminal, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-background to-secondary/30">
+    <div className="flex flex-col min-h-screen bg-background">
       {/* Header */}
       <header className="py-4 px-6 flex items-center justify-between border-b bg-white/80 backdrop-blur-sm sticky top-0 z-10">
         <h1 className="text-xl font-medium">Kuhu</h1>
@@ -57,7 +56,7 @@ const Index = () => {
         </section>
         
         {/* About Section */}
-        <section id="about" className="py-20 px-6 bg-secondary/20">
+        <section id="about" className="py-20 px-6 bg-white/30">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-center">About Me</h2>
             <div className="flex flex-col md:flex-row gap-12">
@@ -115,7 +114,7 @@ const Index = () => {
         </section>
         
         {/* Projects Section */}
-        <section id="projects" className="py-20 px-6 bg-secondary/20">
+        <section id="projects" className="py-20 px-6 bg-white/30">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
