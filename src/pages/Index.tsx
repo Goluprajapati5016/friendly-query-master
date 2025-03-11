@@ -193,7 +193,7 @@ Feel free to ask me about specific Python concepts like loops, functions, classe
   return (
     <div className="flex flex-col h-screen max-h-screen bg-gradient-to-b from-background to-secondary/30">
       <header className="py-4 px-6 flex items-center justify-center border-b bg-white/80 backdrop-blur-sm">
-        <h1 className="text-xl font-medium">Python Code Assistant</h1>
+        <h1 className="text-xl font-medium">Kuhu</h1>
       </header>
       
       <main className="flex-1 flex flex-col overflow-hidden max-w-3xl w-full mx-auto">
