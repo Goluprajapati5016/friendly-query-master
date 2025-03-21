@@ -1,11 +1,8 @@
-
 import React from "react";
 import { Github, Linkedin, Mail, ExternalLink, Code, Terminal, BookOpen, Instagram, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const Index = () => {
-  return (
-    <div className="flex flex-col min-h-screen bg-background">
+  return <div className="flex flex-col min-h-screen bg-background">
       {/* Header */}
       <header className="py-4 px-6 flex items-center justify-between border-b bg-white/90 backdrop-blur-sm sticky top-0 z-10">
         <h1 className="text-xl font-medium">Kuhu</h1>
@@ -83,8 +80,9 @@ const Index = () => {
               <div className="flex-1 space-y-6">
                 <div className="p-6 bg-white rounded-lg shadow-sm">
                   <h3 className="text-xl font-medium mb-3">Education</h3>
-                  <p className="text-gray-600">MSc in Computer Science</p>
-                  <p className="text-gray-600">University of Technology, 2018-2020</p>
+                  <p className="text-gray-600">MAC  </p>
+                  <p className="text-gray-600">Veer Bahadur Singh Purvanchal University, Jaunpur, UP, India 2021-2024
+                </p>
                 </div>
                 <div className="p-6 bg-white rounded-lg shadow-sm">
                   <h3 className="text-xl font-medium mb-3">Experience</h3>
@@ -101,21 +99,9 @@ const Index = () => {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-center">Technical Skills</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <SkillCard 
-                title="Python Development" 
-                icon={<Code className="h-8 w-8 text-primary" />}
-                skills={["Django", "Flask", "FastAPI", "OOP", "Python 3.x"]}
-              />
-              <SkillCard 
-                title="Data Science" 
-                icon={<Terminal className="h-8 w-8 text-primary" />}
-                skills={["Pandas", "NumPy", "Scikit-Learn", "TensorFlow", "Data Visualization"]}
-              />
-              <SkillCard 
-                title="Web Technologies" 
-                icon={<BookOpen className="h-8 w-8 text-primary" />}
-                skills={["HTML/CSS", "JavaScript", "RESTful APIs", "GraphQL", "Microservices"]}
-              />
+              <SkillCard title="Python Development" icon={<Code className="h-8 w-8 text-primary" />} skills={["Django", "Flask", "FastAPI", "OOP", "Python 3.x"]} />
+              <SkillCard title="Data Science" icon={<Terminal className="h-8 w-8 text-primary" />} skills={["Pandas", "NumPy", "Scikit-Learn", "TensorFlow", "Data Visualization"]} />
+              <SkillCard title="Web Technologies" icon={<BookOpen className="h-8 w-8 text-primary" />} skills={["HTML/CSS", "JavaScript", "RESTful APIs", "GraphQL", "Microservices"]} />
             </div>
           </div>
         </section>
@@ -125,34 +111,10 @@ const Index = () => {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <ProjectCard 
-                title="Data Analysis Dashboard"
-                description="A Flask-based web application for visualizing and analyzing large datasets with interactive charts and filtering capabilities."
-                technologies={["Python", "Flask", "Pandas", "Plotly", "SQLAlchemy"]}
-                githubUrl="https://github.com"
-                liveUrl="https://example.com"
-              />
-              <ProjectCard 
-                title="Automated Trading Bot"
-                description="A Python bot that uses machine learning algorithms to analyze market trends and execute trades automatically based on predefined strategies."
-                technologies={["Python", "TensorFlow", "Pandas", "REST APIs", "Docker"]}
-                githubUrl="https://github.com"
-                liveUrl="https://example.com"
-              />
-              <ProjectCard 
-                title="Content Management System"
-                description="A Django-based CMS with custom user roles, content workflow, and API integrations for third-party services."
-                technologies={["Python", "Django", "PostgreSQL", "Redis", "Celery"]}
-                githubUrl="https://github.com"
-                liveUrl="https://example.com"
-              />
-              <ProjectCard 
-                title="Natural Language Processing Tool"
-                description="A Python library for text analysis, sentiment detection, and automated summarization using advanced NLP techniques."
-                technologies={["Python", "NLTK", "spaCy", "Transformers", "FastAPI"]}
-                githubUrl="https://github.com"
-                liveUrl="https://example.com"
-              />
+              <ProjectCard title="Data Analysis Dashboard" description="A Flask-based web application for visualizing and analyzing large datasets with interactive charts and filtering capabilities." technologies={["Python", "Flask", "Pandas", "Plotly", "SQLAlchemy"]} githubUrl="https://github.com" liveUrl="https://example.com" />
+              <ProjectCard title="Automated Trading Bot" description="A Python bot that uses machine learning algorithms to analyze market trends and execute trades automatically based on predefined strategies." technologies={["Python", "TensorFlow", "Pandas", "REST APIs", "Docker"]} githubUrl="https://github.com" liveUrl="https://example.com" />
+              <ProjectCard title="Content Management System" description="A Django-based CMS with custom user roles, content workflow, and API integrations for third-party services." technologies={["Python", "Django", "PostgreSQL", "Redis", "Celery"]} githubUrl="https://github.com" liveUrl="https://example.com" />
+              <ProjectCard title="Natural Language Processing Tool" description="A Python library for text analysis, sentiment detection, and automated summarization using advanced NLP techniques." technologies={["Python", "NLTK", "spaCy", "Transformers", "FastAPI"]} githubUrl="https://github.com" liveUrl="https://example.com" />
             </div>
           </div>
         </section>
@@ -192,78 +154,66 @@ const Index = () => {
         <p>© {new Date().getFullYear()} Kuhu. All rights reserved.</p>
         <p className="text-sm mt-2">Built with React & Tailwind CSS</p>
       </footer>
-    </div>
-  );
+    </div>;
 };
 
 // Skill Card Component
-const SkillCard = ({ title, icon, skills }: { title: string, icon: React.ReactNode, skills: string[] }) => {
-  return (
-    <div className="bg-white p-6 rounded-lg shadow-sm transition-transform hover:scale-105">
+const SkillCard = ({
+  title,
+  icon,
+  skills
+}: {
+  title: string;
+  icon: React.ReactNode;
+  skills: string[];
+}) => {
+  return <div className="bg-white p-6 rounded-lg shadow-sm transition-transform hover:scale-105">
       <div className="flex items-center gap-4 mb-4">
         {icon}
         <h3 className="text-xl font-medium">{title}</h3>
       </div>
       <ul className="space-y-2">
-        {skills.map((skill, index) => (
-          <li key={index} className="flex items-center gap-2">
+        {skills.map((skill, index) => <li key={index} className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-primary"></div>
             <span>{skill}</span>
-          </li>
-        ))}
+          </li>)}
       </ul>
-    </div>
-  );
+    </div>;
 };
 
 // Project Card Component
-const ProjectCard = ({ 
-  title, 
-  description, 
-  technologies, 
-  githubUrl, 
-  liveUrl 
-}: { 
-  title: string, 
-  description: string, 
-  technologies: string[], 
-  githubUrl: string, 
-  liveUrl: string 
+const ProjectCard = ({
+  title,
+  description,
+  technologies,
+  githubUrl,
+  liveUrl
+}: {
+  title: string;
+  description: string;
+  technologies: string[];
+  githubUrl: string;
+  liveUrl: string;
 }) => {
-  return (
-    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+  return <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
       <h3 className="text-xl font-medium mb-3">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
       <div className="mb-4">
         <div className="text-sm font-medium mb-2">Technologies:</div>
         <div className="flex flex-wrap gap-2">
-          {technologies.map((tech, index) => (
-            <span key={index} className="px-2 py-1 bg-gray-100 rounded-full text-xs">
+          {technologies.map((tech, index) => <span key={index} className="px-2 py-1 bg-gray-100 rounded-full text-xs">
               {tech}
-            </span>
-          ))}
+            </span>)}
         </div>
       </div>
       <div className="flex gap-4 mt-4">
-        <a 
-          href={githubUrl} 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="flex items-center gap-1 text-sm text-gray-600 hover:text-primary transition-colors"
-        >
+        <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-gray-600 hover:text-primary transition-colors">
           <Github className="h-4 w-4" /> GitHub
         </a>
-        <a 
-          href={liveUrl} 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="flex items-center gap-1 text-sm text-gray-600 hover:text-primary transition-colors"
-        >
+        <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-gray-600 hover:text-primary transition-colors">
           <ExternalLink className="h-4 w-4" /> Live Demo
         </a>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
