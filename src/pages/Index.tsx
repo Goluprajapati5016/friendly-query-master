@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Github, Linkedin, Mail, ExternalLink, Code, Terminal, BookOpen } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink, Code, Terminal, BookOpen, Instagram, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
@@ -21,6 +21,12 @@ const Index = () => {
           </a>
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <Linkedin className="h-5 w-5 text-gray-600 hover:text-primary transition-colors" />
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <Instagram className="h-5 w-5 text-gray-600 hover:text-primary transition-colors" />
+          </a>
+          <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <MessageCircle className="h-5 w-5 text-gray-600 hover:text-primary transition-colors" />
           </a>
         </div>
       </header>
@@ -167,6 +173,12 @@ const Index = () => {
               </a>
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary hover:underline">
                 <Github className="h-5 w-5" /> GitHub
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary hover:underline">
+                <Instagram className="h-5 w-5" /> Instagram
+              </a>
+              <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary hover:underline">
+                <MessageCircle className="h-5 w-5" /> WhatsApp
               </a>
             </div>
             <Button className="px-8">
