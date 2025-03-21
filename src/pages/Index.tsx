@@ -1,6 +1,7 @@
 import React from "react";
 import { Github, Linkedin, Mail, ExternalLink, Code, Terminal, BookOpen, Instagram, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 const Index = () => {
   return <div className="flex flex-col min-h-screen bg-background">
       {/* Header */}
@@ -127,8 +128,8 @@ const Index = () => {
               Interested in working together or have a question? Feel free to reach out!
             </p>
             <div className="flex justify-center gap-6 mb-8">
-              <a href="mailto:contact@example.com" className="flex items-center gap-2 text-primary hover:underline">
-                <Mail className="h-5 w-5" /> contact@example.com
+              <a href="mailto:gp1515151@gmail.com" className="flex items-center gap-2 text-primary hover:underline">
+                <Mail className="h-5 w-5" /> gp1515151@gmail.com
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary hover:underline">
                 <Linkedin className="h-5 w-5" /> LinkedIn
@@ -216,4 +217,5 @@ const ProjectCard = ({
       </div>
     </div>;
 };
+
 export default Index;
