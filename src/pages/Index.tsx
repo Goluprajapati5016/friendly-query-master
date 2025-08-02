@@ -14,17 +14,17 @@ const Index = () => {
           <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
         </nav>
         <div className="flex items-center gap-4">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <Github className="h-5 w-5 text-gray-600 hover:text-primary transition-colors" />
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover-scale">
+            <Github className="h-5 w-5 text-gray-600 hover:text-primary transition-all duration-300" />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <Linkedin className="h-5 w-5 text-gray-600 hover:text-primary transition-colors" />
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover-scale">
+            <Linkedin className="h-5 w-5 text-gray-600 hover:text-primary transition-all duration-300" />
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <Instagram className="h-5 w-5 text-gray-600 hover:text-primary transition-colors" />
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover-scale">
+            <Instagram className="h-5 w-5 text-gray-600 hover:text-primary transition-all duration-300" />
           </a>
-          <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-            <MessageCircle className="h-5 w-5 text-gray-600 hover:text-primary transition-colors" />
+          <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="hover-scale">
+            <MessageCircle className="h-5 w-5 text-gray-600 hover:text-primary transition-all duration-300" />
           </a>
         </div>
       </header>
@@ -33,28 +33,28 @@ const Index = () => {
         {/* Hero Section */}
         <section className="py-20 px-6">
           <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
-            <div className="flex-1 space-y-6">
-              <h1 className="text-4xl md:text-6xl font-bold">
+            <div className="flex-1 space-y-6 animate-fade-in">
+              <h1 className="text-4xl md:text-6xl font-bold animate-fade-in" style={{animationDelay: '0.2s'}}>
                 Hi, I'm <span className="text-primary">Kuhu</span>
               </h1>
-              <h2 className="text-2xl md:text-3xl text-gray-600">
+              <h2 className="text-2xl md:text-3xl text-gray-600 animate-fade-in" style={{animationDelay: '0.4s'}}>
                 Python Developer & Data Scientist
               </h2>
-              <p className="text-lg text-gray-600 max-w-xl">
+              <p className="text-lg text-gray-600 max-w-xl animate-fade-in" style={{animationDelay: '0.6s'}}>
                 I build robust web applications, data analytics solutions, and automation tools using Python and modern technologies.
               </p>
-              <div className="flex gap-4 pt-4">
-                <Button>
+              <div className="flex gap-4 pt-4 animate-fade-in" style={{animationDelay: '0.8s'}}>
+                <Button className="hover-scale">
                   <Mail className="mr-2 h-4 w-4" /> Contact Me
                 </Button>
-                <Button variant="outline">
+                <Button variant="outline" className="hover-scale">
                   View Resume
                 </Button>
               </div>
             </div>
-            <div className="relative w-72 h-72 rounded-full bg-gradient-to-r from-primary/30 to-accent/50 flex items-center justify-center">
-              <div className="w-64 h-64 rounded-full bg-white/90 shadow-lg flex items-center justify-center">
-                <Terminal className="h-24 w-24 text-primary" />
+            <div className="relative w-72 h-72 rounded-full bg-gradient-to-r from-primary/30 to-accent/50 flex items-center justify-center hover-scale animate-fade-in" style={{animationDelay: '0.3s'}}>
+              <div className="w-64 h-64 rounded-full bg-white/90 shadow-lg flex items-center justify-center transition-all duration-300 hover:shadow-xl">
+                <Terminal className="h-24 w-24 text-primary transition-transform duration-300 hover:scale-110" />
               </div>
             </div>
           </div>
@@ -63,7 +63,7 @@ const Index = () => {
         {/* About Section */}
         <section id="about" className="py-20 px-6 bg-accent/30">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center">About Me</h2>
+            <h2 className="text-3xl font-bold mb-12 text-center animate-fade-in">About Me</h2>
             <div className="flex flex-col md:flex-row gap-12">
               <div className="flex-1 space-y-4">
                 <p className="text-lg">
@@ -98,11 +98,17 @@ const Index = () => {
         {/* Skills Section */}
         <section id="skills" className="py-20 px-6">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center">Technical Skills</h2>
+            <h2 className="text-3xl font-bold mb-12 text-center animate-fade-in">Technical Skills</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <SkillCard title="Python Development" icon={<Code className="h-8 w-8 text-primary" />} skills={["Django", "Flask", "FastAPI", "OOP", "Python 3.x"]} />
-              <SkillCard title="Data Science" icon={<Terminal className="h-8 w-8 text-primary" />} skills={["Pandas", "NumPy", "Scikit-Learn", "TensorFlow", "Data Visualization"]} />
-              <SkillCard title="Web Technologies" icon={<BookOpen className="h-8 w-8 text-primary" />} skills={["HTML/CSS", "JavaScript", "RESTful APIs", "GraphQL", "Microservices"]} />
+              <div className="animate-fade-in" style={{animationDelay: '0.1s'}}>
+                <SkillCard title="Python Development" icon={<Code className="h-8 w-8 text-primary" />} skills={["Django", "Flask", "FastAPI", "OOP", "Python 3.x"]} />
+              </div>
+              <div className="animate-fade-in" style={{animationDelay: '0.2s'}}>
+                <SkillCard title="Data Science" icon={<Terminal className="h-8 w-8 text-primary" />} skills={["Pandas", "NumPy", "Scikit-Learn", "TensorFlow", "Data Visualization"]} />
+              </div>
+              <div className="animate-fade-in" style={{animationDelay: '0.3s'}}>
+                <SkillCard title="Web Technologies" icon={<BookOpen className="h-8 w-8 text-primary" />} skills={["HTML/CSS", "JavaScript", "RESTful APIs", "GraphQL", "Microservices"]} />
+              </div>
             </div>
           </div>
         </section>
@@ -110,12 +116,20 @@ const Index = () => {
         {/* Projects Section */}
         <section id="projects" className="py-20 px-6 bg-accent/30">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
+            <h2 className="text-3xl font-bold mb-12 text-center animate-fade-in">Featured Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <ProjectCard title="Data Analysis Dashboard" description="A Flask-based web application for visualizing and analyzing large datasets with interactive charts and filtering capabilities." technologies={["Python", "Flask", "Pandas", "Plotly", "SQLAlchemy"]} githubUrl="https://github.com" liveUrl="https://example.com" />
-              <ProjectCard title="Automated Trading Bot" description="A Python bot that uses machine learning algorithms to analyze market trends and execute trades automatically based on predefined strategies." technologies={["Python", "TensorFlow", "Pandas", "REST APIs", "Docker"]} githubUrl="https://github.com" liveUrl="https://example.com" />
-              <ProjectCard title="Content Management System" description="A Django-based CMS with custom user roles, content workflow, and API integrations for third-party services." technologies={["Python", "Django", "PostgreSQL", "Redis", "Celery"]} githubUrl="https://github.com" liveUrl="https://example.com" />
-              <ProjectCard title="Natural Language Processing Tool" description="A Python library for text analysis, sentiment detection, and automated summarization using advanced NLP techniques." technologies={["Python", "NLTK", "spaCy", "Transformers", "FastAPI"]} githubUrl="https://github.com" liveUrl="https://example.com" />
+              <div className="animate-fade-in" style={{animationDelay: '0.1s'}}>
+                <ProjectCard title="Data Analysis Dashboard" description="A Flask-based web application for visualizing and analyzing large datasets with interactive charts and filtering capabilities." technologies={["Python", "Flask", "Pandas", "Plotly", "SQLAlchemy"]} githubUrl="https://github.com" liveUrl="https://example.com" />
+              </div>
+              <div className="animate-fade-in" style={{animationDelay: '0.2s'}}>
+                <ProjectCard title="Automated Trading Bot" description="A Python bot that uses machine learning algorithms to analyze market trends and execute trades automatically based on predefined strategies." technologies={["Python", "TensorFlow", "Pandas", "REST APIs", "Docker"]} githubUrl="https://github.com" liveUrl="https://example.com" />
+              </div>
+              <div className="animate-fade-in" style={{animationDelay: '0.3s'}}>
+                <ProjectCard title="Content Management System" description="A Django-based CMS with custom user roles, content workflow, and API integrations for third-party services." technologies={["Python", "Django", "PostgreSQL", "Redis", "Celery"]} githubUrl="https://github.com" liveUrl="https://example.com" />
+              </div>
+              <div className="animate-fade-in" style={{animationDelay: '0.4s'}}>
+                <ProjectCard title="Natural Language Processing Tool" description="A Python library for text analysis, sentiment detection, and automated summarization using advanced NLP techniques." technologies={["Python", "NLTK", "spaCy", "Transformers", "FastAPI"]} githubUrl="https://github.com" liveUrl="https://example.com" />
+              </div>
             </div>
           </div>
         </section>
@@ -128,20 +142,20 @@ const Index = () => {
               Interested in working together or have a question? Feel free to reach out!
             </p>
             <div className="flex justify-center gap-6 mb-8">
-              <a href="mailto:gp1515151@gmail.com" className="flex items-center gap-2 text-primary hover:underline">
-                <Mail className="h-5 w-5" /> gp1515151@gmail.com
+              <a href="mailto:gp1515151@gmail.com" className="flex items-center gap-2 text-primary hover:underline hover-scale story-link">
+                <Mail className="h-5 w-5 transition-transform duration-300 hover:scale-110" /> gp1515151@gmail.com
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary hover:underline">
-                <Linkedin className="h-5 w-5" /> LinkedIn
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary hover:underline hover-scale story-link">
+                <Linkedin className="h-5 w-5 transition-transform duration-300 hover:scale-110" /> LinkedIn
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary hover:underline">
-                <Github className="h-5 w-5" /> GitHub
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary hover:underline hover-scale story-link">
+                <Github className="h-5 w-5 transition-transform duration-300 hover:scale-110" /> GitHub
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary hover:underline">
-                <Instagram className="h-5 w-5" /> Instagram
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary hover:underline hover-scale story-link">
+                <Instagram className="h-5 w-5 transition-transform duration-300 hover:scale-110" /> Instagram
               </a>
-              <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary hover:underline">
-                <MessageCircle className="h-5 w-5" /> WhatsApp
+              <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary hover:underline hover-scale story-link">
+                <MessageCircle className="h-5 w-5 transition-transform duration-300 hover:scale-110" /> WhatsApp
               </a>
             </div>
             <Button className="px-8">
@@ -168,9 +182,11 @@ const SkillCard = ({
   icon: React.ReactNode;
   skills: string[];
 }) => {
-  return <div className="bg-white p-6 rounded-lg shadow-sm transition-transform hover:scale-105">
+  return <div className="bg-white p-6 rounded-lg shadow-sm transition-all duration-300 hover:scale-105 hover:shadow-lg">
       <div className="flex items-center gap-4 mb-4">
-        {icon}
+        <div className="transition-transform duration-300 hover:scale-110 hover:rotate-6">
+          {icon}
+        </div>
         <h3 className="text-xl font-medium">{title}</h3>
       </div>
       <ul className="space-y-2">
@@ -196,7 +212,7 @@ const ProjectCard = ({
   githubUrl: string;
   liveUrl: string;
 }) => {
-  return <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+  return <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 hover:scale-105">
       <h3 className="text-xl font-medium mb-3">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
       <div className="mb-4">
@@ -208,11 +224,11 @@ const ProjectCard = ({
         </div>
       </div>
       <div className="flex gap-4 mt-4">
-        <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-gray-600 hover:text-primary transition-colors">
-          <Github className="h-4 w-4" /> GitHub
+        <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-gray-600 hover:text-primary transition-all duration-300 hover-scale">
+          <Github className="h-4 w-4 transition-transform duration-300 hover:scale-110" /> GitHub
         </a>
-        <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-gray-600 hover:text-primary transition-colors">
-          <ExternalLink className="h-4 w-4" /> Live Demo
+        <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm text-gray-600 hover:text-primary transition-all duration-300 hover-scale">
+          <ExternalLink className="h-4 w-4 transition-transform duration-300 hover:scale-110" /> Live Demo
         </a>
       </div>
     </div>;
